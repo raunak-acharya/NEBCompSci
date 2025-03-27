@@ -48,6 +48,7 @@
         <a href="#chapter7">Ch 7</a>
         <a href="#chapter8">Ch 8</a>
         <a href="#chapter11">Chapter wise Q/A</a>
+        <a href="#chapterC">C programs and output</a>
     </div>
 
     <div data-aos="fade-up" data-aos-delay="500" class="content">
@@ -55,7 +56,7 @@
             <blockquote class="title">
                 <h1>Chapter 1: Computer system</h1>
             </blockquote>
-            <div class="content ck-content">
+            <div>
                 <h4>Introduction</h4>
                 <p>Computer is an electronic device device derived from the Latin word "computere" which means to calculate. It accepts raw facts and figures as an input which are isolated and uninterpreted through input device, process it according to the
                     requirement of the user or command supplied by the user, store it before and after processing of require and produce a meaningful information as an output through an output device. Generally, computer works on IPO (Input-Process-Output)
@@ -332,12 +333,12 @@
 
             </div>
         </div>
-        <div id="chapter2" class="scrollspy chapter">
+        <div id="chapter2">
 
             <blockquote>
                 <h1>Chapter 2: Number System, Conversion and Boolean Logic</h1>
             </blockquote>
-            <div class="content ck-content">
+            <div>
                 <p><strong>1's and 2's Complement</strong></p>
                 <p><strong>1's Complement:</strong> Reciprocal of 1s to 0s and 0s to 1s is its 1's complement. For eg, 1's Complement of (1011)2 is (0100)2&nbsp;</p>
                 <p><strong>2's Complement: </strong>Adding 1 to the 1's complement of a given binary number is its 2's complement.&nbsp;</p>
@@ -516,7 +517,7 @@
                         </tbody>
                     </table>
                 </figure>
-                <h4><span class="text-big"><strong>Logic Gate</strong></span></h4>
+                <h4><span><strong>Logic Gate</strong></span></h4>
                 <p>A logic Gate is an electronic circuit that operates on one or more inputs to produce an output. Logic Gate are used for binary operations which are very fundamental components for modern digital computer. Logic gates are embedded unit
                     an Integrated Circuit (IC). Each gate has its specific function and graphical symbol. In digital computer there are three basic logic gates. <a href="https://readersnepal.com/logic-gates-with-gate-symbol-and-truth-table">Click here</a>                    for gate symbol and Venn diagram.</p>
                 <p><strong><u>a. AND gate:</u></strong> AND Gate is an electronic Circuit which produce high output (1) only when both the inputs are high. The output is same as the result of basic arithmetic multiplication. This gate may have more than
@@ -3482,19 +3483,17 @@ printf("</span>%s is not palindrome”,b);
                         <strong>3. What is HTML? Explain its structure and basic tags.</strong><br> **HTML (Hypertext Markup Language)** is the standard markup language used to create and structure content on the web. It defines the structure of a web
                         page by using a series of elements or tags that tell the browser how to display content.<br><br> The basic structure of an HTML document includes:<br><br> 1. **Document Type Declaration (Doctype)**: Specifies the version of HTML
                         being used. Example: `
-                        <!DOCTYPE html>`<br> 2. **HTML Tag**: The root element that contains the entire HTML document. Example: `
-                        <html>`<br> 3. **Head Section**: Contains metadata about the document, such as the title, character set, and links to external files (CSS, JavaScript). Example: `
+                        <br> 2. HTML Tag: The root element that contains the entire HTML document. Example: `
+                        <html>`<br> 3. Head Section: Contains metadata about the document, such as the title, character set, and links to external files (CSS, JavaScript). Example: ` `
 
-                        <head>
-                            <title>My Page</title>
-                        </head>`<br> 4. **Body Section**: Contains the content that is displayed in the web browser. Example: `Hello, World!`<br><br>
+                        <br> 4. Body Section: Contains the content that is displayed in the web browser. Example: `Hello, World!`<br><br>
                         <strong>4. What is CSS? Explain its importance and features in web development.</strong><br> **CSS (Cascading Style Sheets)** is a stylesheet language used to control the appearance and layout of a webpage. It works by applying
                         styles to HTML elements, such as colors, fonts, spacing, and positioning.<br><br> **Importance of CSS in web development**:<br><br> 1. **Separation of Content and Design**: CSS separates the structure (HTML) from the design, allowing
                         developers to focus on content and style independently.<br> 2. **Consistency**: CSS ensures a consistent look and feel across all pages of a website by defining common styles in one place.<br> 3. **Responsive Design**: With CSS,
                         websites can be designed to be responsive, adjusting their layout and content to fit different screen sizes and devices (e.g., mobile phones, tablets, desktops).<br> 4. **Enhanced User Experience**: By controlling elements such
                         as colors, fonts, and spacing, CSS helps create visually appealing websites that improve user experience.<br><br> **Key features of CSS** include:<br><br> 1. **Selectors**: Used to target HTML elements to which styles will be applied
-                        (e.g., `h1`, `.class-name`, `#id-name`). 2. **Box Model**: Defines the layout and structure of elements, including margins, borders, padding, and the content area. 3. **Positioning**: Controls the positioning of elements on the
-                        page (e.g., `absolute`, `relative`, `fixed`, `sticky`). 4. **Flexbox and Grid**: Modern layout systems for creating responsive and flexible layouts.<br><br>
+                        (e.g., `h1`, `.class-name`, `#id-name`). 2. **Box Model: Defines the layout and structure of elements, including margins, borders, padding, and the content area. 3. **Positioning**: Controls the positioning of elements on the page
+                        (e.g., `absolute`, `relative`, `fixed`, `sticky`). 4. **Flexbox and Grid**: Modern layout systems for creating responsive and flexible layouts.<br><br>
 
 
 
@@ -3622,9 +3621,164 @@ printf("</span>%s is not palindrome”,b);
                         such as inventions, literary and artistic works, designs, and symbols, 1 and it includes types such as copyright for creative works, patents for inventions, trademarks for brand names, and trade secrets for confidential business
                         information; Nepal has legal provisions in place to preserve intellectual property rights, including the Copyright Act and the Patent, Design, and Trademark Act.
                 </div>
-            </div>
-        </div>
-    </div>
+                <div id="chapterC">
+                    <div class="">
+                        <h2>C Program to Check if a Number is Prime or Not</h2>
+                        <pre>
+#include <stdio.h>
+
+    int main() {
+    int num, i, isPrime = 1;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    if (num <= 1) {
+        isPrime = 0;
+    } else {
+        for (i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+    }
+
+    if (isPrime == 1) {
+        printf("%d is a prime number.\n", num);
+    } else {
+        printf("%d is not a prime number.\n", num);
+    }
+    printf("Executed by Raunak Acharya");
+    return 0;
+}
+            </pre>
+                        <img src="1.png">
+                    </div>
+
+                    <div class="program">
+                        <h2>C Program to Find the Factorial of a Number</h2>
+                        <pre>
+#include <stdio.h>
+
+int main() {
+    int num, i;
+    int factorial = 1;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num < 0) {
+        printf("Factorial is not defined for negative numbers.\n");
+    } else {
+        for (i = 1; i <= num; i++) {
+            factorial *= i;
+        }
+        printf("Factorial of %d = %d\n", num, factorial);
+    }
+    printf("Executed by Raunak Acharya");
+    return 0;
+}
+            </pre>
+                        <img src="2.png">
+                    </div>
+
+                    <div class="program">
+                        <h2>C Program to Check if a Number is Palindrome or Not</h2>
+                        <pre>
+#include <stdio.h>
+
+int main() {
+    int num, reversedNum = 0, remainder, originalNum;
+    
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    
+    originalNum = num;
+    
+    while (num != 0) {
+        remainder = num % 10;
+        reversedNum = reversedNum * 10 + remainder;
+        num /= 10;
+    }
+
+    if (originalNum == reversedNum) {
+        printf("%d is a palindrome.\n", originalNum);
+    } else {
+        printf("%d is not a palindrome.\n", originalNum);
+    }
+    printf("Executed by Raunak Acharya");
+    return 0;
+}
+            </pre>
+                        <img src="3.png">
+
+                    </div>
+
+                    <div class="program">
+                        <h2>C Program to Display 'n' Number of Terms of Fibonacci Series</h2>
+                        <pre>
+#include <stdio.h>
+
+int main() {
+int i, n, a= 0, b = 1, next;
+printf("Enter the number of terms: ");
+scanf("%d", &n);
+
+printf("Fibonacci Series: ");
+    
+for (i = 0; i < n; i++) {
+    if (i <= 1) {
+        next = i;
+        } else {
+            next = a + b;
+            a = b;
+            b = next;
+        }
+            printf("%d ", next);
+            }
+
+            printf("\n");
+            printf("Executed by Raunak Acharya");
+            return 0;
+            }
+            
+            </pre> <img src="4.png">
+                    </div>
+
+                    <div class="program">
+                        <h2>C Program to Check Whether a Number is a Perfect Number or Not</h2>
+                        <pre>
+#include <stdio.h>
+
+int main() {
+    int i, num, sum = 0;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    for (i = 1; i <= num / 2; i++) {
+        if (num % i == 0) {
+            sum += i;
+        }
+    }
+
+         if (sum == num) {
+        printf("%d is a perfect number.\n", num);
+            } else {
+            printf("%d is not a perfect number.\n", num);
+            }
+            printf("Executed by Raunak Acharya");
+            return 0;
+            }
+            </pre> <img src="5.png">
+                    </div>
+                </div>
 </body>
 
 </html>
+
+</div>
+</div>
+</div>
+</body>
