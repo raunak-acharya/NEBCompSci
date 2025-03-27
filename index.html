@@ -5,7 +5,6 @@
     <title>NEB Grade 11</title>
     <style>
         body {
-            margin-left: 20;
             font-family: Arial, Helvetica, sans-serif;
         }
         
@@ -49,6 +48,7 @@
         <a href="#chapter8">Ch 8</a>
         <a href="#chapter11">Chapter wise Q/A</a>
         <a href="#chapterC">C programs and output</a>
+        <a href="#concept">C programming concepts</a>
     </div>
 
     <div data-aos="fade-up" data-aos-delay="500" class="content">
@@ -3774,6 +3774,378 @@ int main() {
             </pre> <img src="5.png">
                     </div>
                 </div>
+
+
+                <h1 id="concept">C Programming Concepts</h1>
+
+                <h1>Iterative Control Structures in C</h1>
+
+                <h2>1. <code>for</code> Loop</h2>
+                <p><strong>Definition:</strong> The <code>for</code> loop is used when the number of iterations is known beforehand.</p>
+
+                <h3>Syntax:</h3>
+                <pre><code>for (initialization; condition; increment/decrement) {
+   // Statements to be executed
+}</code></pre>
+
+                <h3>Example Program (<code>for</code> loop):</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   for (int i = 0; i < 5; i++) {
+       printf("Iteration %d\n", i);
+   }
+   return 0;
+}</code></pre>
+
+                <h3>Output:</h3>
+                <pre><code>Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4</code></pre>
+
+                <hr>
+
+                <h2>2. <code>while</code> Loop</h2>
+                <p><strong>Definition:</strong> The <code>while</code> loop is used when the number of iterations is not known in advance. The condition is checked before each iteration.</p>
+
+                <h3>Syntax:</h3>
+                <pre><code>while (condition) {
+   // Statements to be executed
+}</code></pre>
+
+                <h3>Example Program (<code>while</code> loop):</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int i = 0;
+   while (i < 5) {
+       printf("Iteration %d\n", i);
+       i++;
+   }
+   return 0;
+}</code></pre>
+
+                <h3>Output:</h3>
+                <pre><code>Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4</code></pre>
+
+                <hr>
+
+                <h2>3. <code>do-while</code> Loop</h2>
+                <p><strong>Definition:</strong> The <code>do-while</code> loop guarantees at least one iteration, as the condition is checked after the loop body.</p>
+
+                <h3>Syntax:</h3>
+                <pre><code>do {
+   // Statements to be executed
+} while (condition);</code></pre>
+
+                <h3>Example Program (<code>do-while</code> loop):</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int i = 0;
+   do {
+       printf("Iteration %d\n", i);
+       i++;
+   } while (i < 5);
+   return 0;
+}</code></pre>
+
+                <h3>Output:</h3>
+                <pre><code>Iteration 0
+Iteration 1
+Iteration 2
+Iteration 3
+Iteration 4</code></pre>
+
+                <hr>
+
+                <h1>Arrays in C</h1>
+
+                <h2>1. 1D Array</h2>
+                <p><strong>Definition:</strong> A 1D array is a single-dimensional collection of elements.</p>
+
+                <h3>Syntax:</h3>
+                <pre><code>type array_name[size];</code></pre>
+
+                <h3>Example Program (1D Array):</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int arr[5] = {1, 2, 3, 4, 5};
+   
+   for (int i = 0; i < 5; i++) {
+       printf("Element at index %d: %d\n", i, arr[i]);
+   }
+   return 0;
+}</code></pre>
+
+                <h3>Output:</h3>
+                <pre><code>Element at index 0: 1
+Element at index 1: 2
+Element at index 2: 3
+Element at index 3: 4
+Element at index 4: 5</code></pre>
+
+                <hr>
+
+                <h2>2. 2D Array</h2>
+                <p><strong>Definition:</strong> A 2D array is a two-dimensional collection of elements, typically used to represent matrices.</p>
+
+                <h3>Syntax:</h3>
+                <pre><code>type array_name[row_size][col_size];</code></pre>
+
+                <h3>Example Program (2D Array):</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int arr[2][3] = {{1, 2, 3}, {4, 5, 6}};
+   
+   for (int i = 0; i < 2; i++) {
+       for (int j = 0; j < 3; j++) {
+           printf("Element at [%d][%d]: %d\n", i, j, arr[i][j]);
+       }
+   }
+   return 0;
+}</code></pre>
+
+                <h3>Output:</h3>
+                <pre><code>Element at [0][0]: 1
+Element at [0][1]: 2
+Element at [0][2]: 3
+Element at [1][0]: 4
+Element at [1][1]: 5
+Element at [1][2]: 6</code></pre>
+
+                <hr>
+
+                <h2>3. String Array</h2>
+                <p><strong>Definition:</strong> In C, a string is an array of characters terminated by a null character (<code>\0</code>). An array of strings can be created using a 2D array of characters.</p>
+
+                <h3>Syntax:</h3>
+                <pre><code>char array_name[size][max_string_length];</code></pre>
+
+                <h3>Example Program (String Array):</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   char names[3][20] = {"Alice", "Bob", "Charlie"};
+   
+   for (int i = 0; i < 3; i++) {
+       printf("Name %d: %s\n", i+1, names[i]);
+   }
+   return 0;
+}</code></pre>
+
+                <h3>Output:</h3>
+                <pre><code>Name 1: Alice
+Name 2: Bob
+Name 3: Charlie</code></pre>
+
+                <hr>
+
+                <h1>Additional C Programming Concepts</h1>
+
+                <h2>1. Variables in C</h2>
+                <p><strong>Definition:</strong> A variable in C is a storage location that holds a value that can change during program execution. Each variable is associated with a data type.</p>
+
+                <h3>Syntax:</h3>
+                <pre><code>data_type variable_name;</code></pre>
+
+                <h3>Example Program:</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int age = 25;
+   printf("Age: %d\n", age);
+   return 0;
+}</code></pre>
+
+                <hr>
+
+                <h2>2. Keywords in C</h2>
+                <p><strong>Definition:</strong> Keywords are reserved words in C that have special meanings and cannot be used as identifiers. They define the structure and behavior of the C program.</p>
+
+                <h3>Example Keywords:</h3>
+                <pre><code>int, char, return, if, else, while, for, void</code></pre>
+
+                <h3>Example Program:</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int x = 10;
+   return 0;
+}</code></pre>
+
+                <hr>
+
+                <h2>3. Identifiers in C</h2>
+                <p><strong>Definition:</strong> An identifier is a name used to identify a variable, function, array, or any other user-defined item. It must begin with a letter or an underscore, followed by letters, digits, or underscores.</p>
+
+                <h3>Rules for Identifiers:</h3>
+                <ul>
+                    <li>Cannot be a keyword.</li>
+                    <li>Can include letters (uppercase and lowercase), digits, and underscores.</li>
+                    <li>Cannot start with a digit.</li>
+                </ul>
+
+                <h3>Example Program:</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int myVariable = 10;
+   printf("%d\n", myVariable);
+   return 0;
+}</code></pre>
+
+                <hr>
+
+                <h2>4. Expression in C</h2>
+                <p><strong>Definition:</strong> An expression in C is a combination of variables, constants, operators, and function calls that are evaluated to produce a value.</p>
+
+                <h3>Example Program:</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int a = 5, b = 10;
+   int sum = a + b;
+   printf("Sum: %d\n", sum);
+   return 0;
+}</code></pre>
+
+                <hr>
+
+                <h2>5. Operators in C</h2>
+                <p><strong>Definition:</strong> Operators are symbols that perform operations on variables or values. C supports several types of operators.</p>
+
+                <h3>Types of Operators:</h3>
+                <ul>
+                    <li>Arithmetic Operators: +, -, *, /, %</li>
+                    <li>Relational Operators: ==, !=, >,
+                        <,>=,
+                            <=</li>
+                                <li>Logical Operators: &&, ||, !</li>
+                                <li>Assignment Operators: =, +=, -=, *=, /=</li>
+                                <li>Bitwise Operators: &, |, ^, ~,
+                                    <<,>></li>
+                                <li>Unary Operators: ++, --</li>
+                </ul>
+
+                <h3>Example Program:</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int a = 5, b = 10;
+   int sum = a + b;
+   printf("Sum: %d\n", sum);
+   return 0;
+}</code></pre>
+
+                <hr>
+
+                <h2>6. Escape Sequence in C</h2>
+                <p><strong>Definition:</strong> An escape sequence in C is a combination of characters that represents a special character.</p>
+
+                <h3>Common Escape Sequences:</h3>
+                <ul>
+                    <li><code>\n</code>: Newline</li>
+                    <li><code>\t</code>: Horizontal Tab</li>
+                    <li><code>\\</code>: Backslash</li>
+                    <li><code>\"</code>: Double Quote</li>
+                    <li><code>\'</code>: Single Quote</li>
+                </ul>
+
+                <h3>Example Program:</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   printf("Hello, World!\n");
+   return 0;
+}</code></pre>
+
+                <hr>
+
+                <h2>7. Header Files in C</h2>
+                <p><strong>Definition:</strong> Header files in C contain declarations of functions and macros. They allow code to be reused and are included at the top of a program using the <code>#include</code> directive.</p>
+
+                <h3>Example:</h3>
+                <pre><code>#include <stdio.h>
+#include <math.h>
+</code></pre>
+
+                <hr>
+
+                <h2>8. Data Types in C</h2>
+                <p><strong>Definition:</strong> Data types specify the type of data that a variable can hold. Common data types include:</p>
+
+                <h3>Common Data Types:</h3>
+                <ul>
+                    <li><code>int</code>: Integer type</li>
+                    <li><code>float</code>: Floating point type</li>
+                    <li><code>char</code>: Character type</li>
+                    <li><code>double</code>: Double precision floating point type</li>
+                </ul>
+
+                <h3>Example Program:</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int a = 5;
+   float b = 3.14;
+   printf("Integer: %d, Float: %.2f\n", a, b);
+   return 0;
+}</code></pre>
+
+                <hr>
+
+                <h2>9. Format Specifiers in C</h2>
+                <p><strong>Definition:</strong> Format specifiers are used to specify the type of data when input or output functions are used. They are used in functions like <code>printf()</code> and <code>scanf()</code>.</p>
+
+                <h3>Common Format Specifiers:</h3>
+                <ul>
+                    <li><code>%d</code>: Integer</li>
+                    <li><code>%f</code>: Floating-point number</li>
+                    <li><code>%c</code>: Character</li>
+                    <li><code>%s</code>: String</li>
+                </ul>
+
+                <h3>Example Program:</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int x = 10;
+   printf("Value: %d\n", x);
+   return 0;
+}</code></pre>
+
+                <hr>
+
+                <h2>10. Input and Output Functions in C</h2>
+                <p><strong>Definition:</strong> C provides functions for reading input and displaying output.</p>
+
+                <h3>Common Functions:</h3>
+                <ul>
+                    <li><code>printf()</code>: Used to display output</li>
+                    <li><code>scanf()</code>: Used to read input from the user</li>
+                </ul>
+
+                <h3>Example Program:</h3>
+                <pre><code>#include <stdio.h>
+
+int main() {
+   int x;
+   printf("Enter a number: ");
+   scanf("%d", &x);
+   printf("You entered: %d\n", x);
+   return 0;
+}</code></pre>
+
+
 </body>
 
 </html>
